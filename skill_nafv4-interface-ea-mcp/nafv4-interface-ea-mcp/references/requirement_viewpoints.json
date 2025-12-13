@@ -1,0 +1,3379 @@
+{
+  "source_file": "mdg/NAFv4-ADMBw-MDG-2024.06.xml",
+  "generated_at": "2025-12-12T23:17:08.223712Z",
+  "viewpoints": [
+    {
+      "name": "R2 - Requirement Catalogue",
+      "alias": "R2 - Requirement Catalogue",
+      "notes": "The R2 represents a catalog of requirements in the architectural model. For this purpose, categories can be created in which the functional and non-functional requirements can be grouped.",
+      "diagram_application": {
+        "uml_type": "Diagram_Custom",
+        "properties": {
+          "alias": "R2 - Requirement Catalogue",
+          "diagramID": "R2",
+          "toolbox": "NAFv4-ADMBw-R2-Toolbox"
+        }
+      },
+      "identifier": "R2",
+      "toolbox": "NAFv4-ADMBw-R2-Toolbox",
+      "toolbox_definition": {
+        "name": "NAFv4-ADMBw-R2-Toolbox",
+        "pages": [
+          {
+            "name": "R2-Elements && Relationships",
+            "elements": [
+              {
+                "stereotype": "FunctionalRequirement",
+                "uml_type": "Requirement",
+                "default_alias": "FunctionalRequirement",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "NonfunctionalRequirement",
+                "uml_type": "Requirement",
+                "default_alias": "NonfunctionalRequirement",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "RequirementCatalogue",
+                "uml_type": "Class",
+                "default_alias": "RequirementCatalogue",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "RequirementCategory",
+                "uml_type": "Class",
+                "default_alias": "RequirementCategory",
+                "profile": "NAFv4-ADMBw"
+              }
+            ],
+            "associations": [
+              {
+                "stereotype": "PartOfCatalogue",
+                "uml_type": "Aggregation",
+                "default_alias": "PartOfCatalogue",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "PartOfCategory",
+                "uml_type": "Aggregation",
+                "default_alias": "PartOfCategory",
+                "profile": "NAFv4-ADMBw"
+              }
+            ]
+          },
+          {
+            "name": "Conforms To Standard",
+            "elements": [
+              {
+                "stereotype": "Standard",
+                "uml_type": "Class",
+                "default_alias": "Standard",
+                "profile": "NAFv4-ADMBw"
+              }
+            ],
+            "associations": [
+              {
+                "stereotype": "ConformsTo",
+                "uml_type": "Dependency",
+                "default_alias": "ConformsTo",
+                "profile": "NAFv4-ADMBw"
+              }
+            ]
+          },
+          {
+            "name": "Findings && Recommendations",
+            "elements": [
+              {
+                "stereotype": "Finding",
+                "uml_type": "Class",
+                "default_alias": "Finding",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "Recommendation",
+                "uml_type": "Class",
+                "default_alias": "Recommendation",
+                "profile": "NAFv4-ADMBw"
+              }
+            ],
+            "associations": [
+              {
+                "stereotype": "RealizesRecommendation",
+                "uml_type": "Realization",
+                "default_alias": "RealizesRecommendation",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "RefersTo",
+                "uml_type": "Dependency",
+                "default_alias": "RefersTo",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "ResultsFrom",
+                "uml_type": "Dependency",
+                "default_alias": "ResultsFrom",
+                "profile": "NAFv4-ADMBw"
+              }
+            ]
+          },
+          {
+            "name": "Stakeholder Concerns",
+            "elements": [
+              {
+                "stereotype": "ActualOrganization",
+                "uml_type": "Object",
+                "default_alias": "ActualOrganization",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "ActualPerson",
+                "uml_type": "Object",
+                "default_alias": "ActualPerson",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "ActualPost",
+                "uml_type": "Object",
+                "default_alias": "ActualPost",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "ActualProject",
+                "uml_type": "Object",
+                "default_alias": "ActualProject",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "Concern",
+                "uml_type": "Class",
+                "default_alias": "Concern",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "Organization",
+                "uml_type": "Class",
+                "default_alias": "Organization",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "Person",
+                "uml_type": "Class",
+                "default_alias": "Person",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "Post",
+                "uml_type": "Class",
+                "default_alias": "Post",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "Project",
+                "uml_type": "Class",
+                "default_alias": "Project",
+                "profile": "NAFv4-ADMBw"
+              }
+            ],
+            "associations": [
+              {
+                "stereotype": "StakeholderConcern",
+                "uml_type": "Dependency",
+                "default_alias": "StakeholderConcern",
+                "profile": "NAFv4-ADMBw"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "R3 - Requirement Dependencies",
+      "alias": "R3 - Requirement Dependencies",
+      "notes": "The R3 is used to show dependencies between different requirements.",
+      "diagram_application": {
+        "uml_type": "Diagram_Custom",
+        "properties": {
+          "alias": "R3 - Requirement Dependencies",
+          "diagramID": "R3",
+          "toolbox": "NAFv4-ADMBw-R3-Toolbox"
+        }
+      },
+      "identifier": "R3",
+      "toolbox": "NAFv4-ADMBw-R3-Toolbox",
+      "toolbox_definition": {
+        "name": "NAFv4-ADMBw-R3-Toolbox",
+        "pages": [
+          {
+            "name": "R3-Elements && Relationships",
+            "elements": [
+              {
+                "stereotype": "FunctionalRequirement",
+                "uml_type": "Requirement",
+                "default_alias": "FunctionalRequirement",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "NonfunctionalRequirement",
+                "uml_type": "Requirement",
+                "default_alias": "NonfunctionalRequirement",
+                "profile": "NAFv4-ADMBw"
+              }
+            ],
+            "associations": [
+              {
+                "stereotype": "ConflictsWith",
+                "uml_type": "Dependency",
+                "default_alias": "ConflictsWith",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "IsDuplicateOf",
+                "uml_type": "Dependency",
+                "default_alias": "IsDuplicateOf",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "Refines",
+                "uml_type": "Dependency",
+                "default_alias": "Refines",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "Replaces",
+                "uml_type": "Dependency",
+                "default_alias": "Replaces",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "Requires",
+                "uml_type": "Dependency",
+                "default_alias": "Requires",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "StemsFrom",
+                "uml_type": "Dependency",
+                "default_alias": "StemsFrom",
+                "profile": "NAFv4-ADMBw"
+              }
+            ]
+          },
+          {
+            "name": "Conforms To Standard",
+            "elements": [
+              {
+                "stereotype": "Standard",
+                "uml_type": "Class",
+                "default_alias": "Standard",
+                "profile": "NAFv4-ADMBw"
+              }
+            ],
+            "associations": [
+              {
+                "stereotype": "ConformsTo",
+                "uml_type": "Dependency",
+                "default_alias": "ConformsTo",
+                "profile": "NAFv4-ADMBw"
+              }
+            ]
+          },
+          {
+            "name": "Findings && Recommendations",
+            "elements": [
+              {
+                "stereotype": "Finding",
+                "uml_type": "Class",
+                "default_alias": "Finding",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "Recommendation",
+                "uml_type": "Class",
+                "default_alias": "Recommendation",
+                "profile": "NAFv4-ADMBw"
+              }
+            ],
+            "associations": [
+              {
+                "stereotype": "RealizesRecommendation",
+                "uml_type": "Realization",
+                "default_alias": "RealizesRecommendation",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "RefersTo",
+                "uml_type": "Dependency",
+                "default_alias": "RefersTo",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "ResultsFrom",
+                "uml_type": "Dependency",
+                "default_alias": "ResultsFrom",
+                "profile": "NAFv4-ADMBw"
+              }
+            ]
+          },
+          {
+            "name": "Stakeholder Concerns",
+            "elements": [
+              {
+                "stereotype": "ActualOrganization",
+                "uml_type": "Object",
+                "default_alias": "ActualOrganization",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "ActualPerson",
+                "uml_type": "Object",
+                "default_alias": "ActualPerson",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "ActualPost",
+                "uml_type": "Object",
+                "default_alias": "ActualPost",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "ActualProject",
+                "uml_type": "Object",
+                "default_alias": "ActualProject",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "Concern",
+                "uml_type": "Class",
+                "default_alias": "Concern",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "Organization",
+                "uml_type": "Class",
+                "default_alias": "Organization",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "Person",
+                "uml_type": "Class",
+                "default_alias": "Person",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "Post",
+                "uml_type": "Class",
+                "default_alias": "Post",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "Project",
+                "uml_type": "Class",
+                "default_alias": "Project",
+                "profile": "NAFv4-ADMBw"
+              }
+            ],
+            "associations": [
+              {
+                "stereotype": "StakeholderConcern",
+                "uml_type": "Dependency",
+                "default_alias": "StakeholderConcern",
+                "profile": "NAFv4-ADMBw"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "R7 - Requirement Derivation",
+      "alias": "R7 - Requirement Derivation",
+      "notes": "The R7 assigns functional and non-functional requirements to the demanding architectural elements. In addition, information about the planned realization can be shown.",
+      "diagram_application": {
+        "uml_type": "Diagram_Custom",
+        "properties": {
+          "alias": "R7 - Requirement Derivation",
+          "diagramID": "R7",
+          "toolbox": "NAFv4-ADMBw-R7-Toolbox"
+        }
+      },
+      "identifier": "R7",
+      "toolbox": "NAFv4-ADMBw-R7-Toolbox",
+      "toolbox_definition": {
+        "name": "NAFv4-ADMBw-R7-Toolbox",
+        "pages": [
+          {
+            "name": "R7-Elements && Relationships",
+            "elements": [
+              {
+                "stereotype": "FunctionalRequirement",
+                "uml_type": "Requirement",
+                "default_alias": "FunctionalRequirement",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "NonfunctionalRequirement",
+                "uml_type": "Requirement",
+                "default_alias": "NonfunctionalRequirement",
+                "profile": "NAFv4-ADMBw"
+              }
+            ],
+            "associations": [
+              {
+                "stereotype": "DerivedFrom",
+                "uml_type": "Dependency",
+                "default_alias": "DerivedFrom",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "Implements",
+                "uml_type": "Abstraction",
+                "default_alias": "Implements",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "Refines",
+                "uml_type": "Dependency",
+                "default_alias": "Refines",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "Requires",
+                "uml_type": "Dependency",
+                "default_alias": "Requires",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "ToBeRealizedBy",
+                "uml_type": "Dependency",
+                "default_alias": "ToBeRealizedBy",
+                "profile": "NAFv4-ADMBw"
+              }
+            ]
+          },
+          {
+            "name": "Constraints && References",
+            "elements": [
+              {
+                "stereotype": "Classification",
+                "uml_type": "Class",
+                "default_alias": "Classification",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "DocumentReference",
+                "uml_type": "Class",
+                "default_alias": "DocumentReference",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "OperationalConstraint",
+                "uml_type": "Class",
+                "default_alias": "OperationalConstraint",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "Reference",
+                "uml_type": "Class",
+                "default_alias": "Reference",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "ResourceConstraint",
+                "uml_type": "Class",
+                "default_alias": "ResourceConstraint",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "ServicePolicy",
+                "uml_type": "Class",
+                "default_alias": "ServicePolicy",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "SMEReference",
+                "uml_type": "Class",
+                "default_alias": "SMEReference",
+                "profile": "NAFv4-ADMBw"
+              }
+            ],
+            "associations": [
+              {
+                "stereotype": "Classified",
+                "uml_type": "Dependency",
+                "default_alias": "Classified",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "JustifiedBy",
+                "uml_type": "Dependency",
+                "default_alias": "JustifiedBy",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "OriginatesFrom",
+                "uml_type": "Dependency",
+                "default_alias": "OriginatesFrom",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "Satisfy",
+                "uml_type": "Dependency",
+                "default_alias": "Satisfy",
+                "profile": "NAFv4-ADMBw"
+              }
+            ]
+          },
+          {
+            "name": "Conforms To Standard",
+            "elements": [
+              {
+                "stereotype": "Standard",
+                "uml_type": "Class",
+                "default_alias": "Standard",
+                "profile": "NAFv4-ADMBw"
+              }
+            ],
+            "associations": [
+              {
+                "stereotype": "ConformsTo",
+                "uml_type": "Dependency",
+                "default_alias": "ConformsTo",
+                "profile": "NAFv4-ADMBw"
+              }
+            ]
+          },
+          {
+            "name": "Findings && Recommendations",
+            "elements": [
+              {
+                "stereotype": "Finding",
+                "uml_type": "Class",
+                "default_alias": "Finding",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "Recommendation",
+                "uml_type": "Class",
+                "default_alias": "Recommendation",
+                "profile": "NAFv4-ADMBw"
+              }
+            ],
+            "associations": [
+              {
+                "stereotype": "RealizesRecommendation",
+                "uml_type": "Realization",
+                "default_alias": "RealizesRecommendation",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "RefersTo",
+                "uml_type": "Dependency",
+                "default_alias": "RefersTo",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "ResultsFrom",
+                "uml_type": "Dependency",
+                "default_alias": "ResultsFrom",
+                "profile": "NAFv4-ADMBw"
+              }
+            ]
+          },
+          {
+            "name": "Stakeholder Concerns",
+            "elements": [
+              {
+                "stereotype": "ActualOrganization",
+                "uml_type": "Object",
+                "default_alias": "ActualOrganization",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "ActualPerson",
+                "uml_type": "Object",
+                "default_alias": "ActualPerson",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "ActualPost",
+                "uml_type": "Object",
+                "default_alias": "ActualPost",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "ActualProject",
+                "uml_type": "Object",
+                "default_alias": "ActualProject",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "Concern",
+                "uml_type": "Class",
+                "default_alias": "Concern",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "Organization",
+                "uml_type": "Class",
+                "default_alias": "Organization",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "Person",
+                "uml_type": "Class",
+                "default_alias": "Person",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "Post",
+                "uml_type": "Class",
+                "default_alias": "Post",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "Project",
+                "uml_type": "Class",
+                "default_alias": "Project",
+                "profile": "NAFv4-ADMBw"
+              }
+            ],
+            "associations": [
+              {
+                "stereotype": "StakeholderConcern",
+                "uml_type": "Dependency",
+                "default_alias": "StakeholderConcern",
+                "profile": "NAFv4-ADMBw"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "R8 - Requirement Fulfilment",
+      "alias": "R8 - Requirement Fulfilment",
+      "notes": "The R8 is used to determine and map acceptance and evaluation criteria for the individual functional and non-functional requirements.",
+      "diagram_application": {
+        "uml_type": "Diagram_Custom",
+        "properties": {
+          "alias": "R8 - Requirement Fulfillment",
+          "diagramID": "R8",
+          "toolbox": "NAFv4-ADMBw-R8-Toolbox"
+        }
+      },
+      "identifier": "R8",
+      "toolbox": "NAFv4-ADMBw-R8-Toolbox",
+      "toolbox_definition": {
+        "name": "NAFv4-ADMBw-R8-Toolbox",
+        "pages": [
+          {
+            "name": "R8-Elements && Relationships",
+            "elements": [
+              {
+                "stereotype": "FitCriterion",
+                "uml_type": "Class",
+                "default_alias": "FitCriterion",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "FulfilmentCriterion",
+                "uml_type": "Class",
+                "default_alias": "FulfilmentCriterion",
+                "profile": "NAFv4-ADMBw"
+              }
+            ],
+            "associations": [
+              {
+                "stereotype": "Checks",
+                "uml_type": "Dependency",
+                "default_alias": "Checks",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "Evaluates",
+                "uml_type": "Realization",
+                "default_alias": "Evaluates",
+                "profile": "NAFv4-ADMBw"
+              }
+            ]
+          },
+          {
+            "name": "Conforms To Standard",
+            "elements": [
+              {
+                "stereotype": "Standard",
+                "uml_type": "Class",
+                "default_alias": "Standard",
+                "profile": "NAFv4-ADMBw"
+              }
+            ],
+            "associations": [
+              {
+                "stereotype": "ConformsTo",
+                "uml_type": "Dependency",
+                "default_alias": "ConformsTo",
+                "profile": "NAFv4-ADMBw"
+              }
+            ]
+          },
+          {
+            "name": "Findings && Recommendations",
+            "elements": [
+              {
+                "stereotype": "Finding",
+                "uml_type": "Class",
+                "default_alias": "Finding",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "Recommendation",
+                "uml_type": "Class",
+                "default_alias": "Recommendation",
+                "profile": "NAFv4-ADMBw"
+              }
+            ],
+            "associations": [
+              {
+                "stereotype": "RealizesRecommendation",
+                "uml_type": "Realization",
+                "default_alias": "RealizesRecommendation",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "RefersTo",
+                "uml_type": "Dependency",
+                "default_alias": "RefersTo",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "ResultsFrom",
+                "uml_type": "Dependency",
+                "default_alias": "ResultsFrom",
+                "profile": "NAFv4-ADMBw"
+              }
+            ]
+          },
+          {
+            "name": "Stakeholder Concerns",
+            "elements": [
+              {
+                "stereotype": "ActualOrganization",
+                "uml_type": "Object",
+                "default_alias": "ActualOrganization",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "ActualPerson",
+                "uml_type": "Object",
+                "default_alias": "ActualPerson",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "ActualPost",
+                "uml_type": "Object",
+                "default_alias": "ActualPost",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "ActualProject",
+                "uml_type": "Object",
+                "default_alias": "ActualProject",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "Concern",
+                "uml_type": "Class",
+                "default_alias": "Concern",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "Organization",
+                "uml_type": "Class",
+                "default_alias": "Organization",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "Person",
+                "uml_type": "Class",
+                "default_alias": "Person",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "Post",
+                "uml_type": "Class",
+                "default_alias": "Post",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "Project",
+                "uml_type": "Class",
+                "default_alias": "Project",
+                "profile": "NAFv4-ADMBw"
+              }
+            ],
+            "associations": [
+              {
+                "stereotype": "StakeholderConcern",
+                "uml_type": "Dependency",
+                "default_alias": "StakeholderConcern",
+                "profile": "NAFv4-ADMBw"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Rr - Requirement Realization",
+      "alias": "Rr - Requirement Realization",
+      "notes": "In the Rr, requirements are assigned to the realizing architectural elements.",
+      "diagram_application": {
+        "uml_type": "Diagram_Custom",
+        "properties": {
+          "alias": "Rr - Requirement Realization",
+          "diagramID": "Rr",
+          "toolbox": "NAFv4-ADMBw-Rr-Toolbox"
+        }
+      },
+      "identifier": "Rr",
+      "toolbox": "NAFv4-ADMBw-Rr-Toolbox",
+      "toolbox_definition": {
+        "name": "NAFv4-ADMBw-Rr-Toolbox",
+        "pages": [
+          {
+            "name": "Rr-Realise",
+            "elements": [],
+            "associations": [
+              {
+                "stereotype": "RealiseRequirement",
+                "uml_type": "Realization",
+                "default_alias": "RealiseRequirement",
+                "profile": "NAFv4-ADMBw"
+              }
+            ]
+          },
+          {
+            "name": "Rr-Realizing Service",
+            "elements": [
+              {
+                "stereotype": "ServiceFunction",
+                "uml_type": "Activity",
+                "default_alias": "ServiceFunction",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "ServiceInterface",
+                "uml_type": "Class",
+                "default_alias": "ServiceInterface",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "ServiceSpecification",
+                "uml_type": "Class",
+                "default_alias": "ServiceSpecification",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "ServiceSpecificationRole",
+                "uml_type": "Part",
+                "default_alias": "ServiceSpecificationRole",
+                "profile": "NAFv4-ADMBw"
+              }
+            ],
+            "associations": []
+          },
+          {
+            "name": "Rr-Realizing Resources",
+            "elements": [
+              {
+                "stereotype": "CapabilityConfiguration",
+                "uml_type": "Class",
+                "default_alias": "CapabilityConfiguration",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "Function",
+                "uml_type": "Activity",
+                "default_alias": "Function",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "NaturalResource",
+                "uml_type": "Class",
+                "default_alias": "NaturalResource",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "ResourceArchitecture",
+                "uml_type": "Class",
+                "default_alias": "ResourceArchitecture",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "ResourceArtifact",
+                "uml_type": "Class",
+                "default_alias": "ResourceArtifact",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "ResourceInterface",
+                "uml_type": "Class",
+                "default_alias": "ResourceInterface",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "Software",
+                "uml_type": "Class",
+                "default_alias": "Software",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "System",
+                "uml_type": "Class",
+                "default_alias": "System",
+                "profile": "NAFv4-ADMBw"
+              }
+            ],
+            "associations": []
+          },
+          {
+            "name": "Rr-Realizing Organizations",
+            "elements": [
+              {
+                "stereotype": "Organization",
+                "uml_type": "Class",
+                "default_alias": "Organization",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "Person",
+                "uml_type": "Class",
+                "default_alias": "Person",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "Post",
+                "uml_type": "Class",
+                "default_alias": "Post",
+                "profile": "NAFv4-ADMBw"
+              }
+            ],
+            "associations": []
+          },
+          {
+            "name": "Rr-Realizing Standards",
+            "elements": [
+              {
+                "stereotype": "Protocol",
+                "uml_type": "Class",
+                "default_alias": "Protocol",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "Protocolstack",
+                "uml_type": "Class",
+                "default_alias": "Protocolstack",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "Standard",
+                "uml_type": "Class",
+                "default_alias": "Standard",
+                "profile": "NAFv4-ADMBw"
+              }
+            ],
+            "associations": []
+          },
+          {
+            "name": "Rr-Realizing Measurement",
+            "elements": [
+              {
+                "stereotype": "Measurement",
+                "uml_type": "Part",
+                "default_alias": "Measurement",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "MeasurementType",
+                "uml_type": "Class",
+                "default_alias": "MeasurementType",
+                "profile": "NAFv4-ADMBw"
+              }
+            ],
+            "associations": []
+          },
+          {
+            "name": "Conforms To Standard",
+            "elements": [
+              {
+                "stereotype": "Standard",
+                "uml_type": "Class",
+                "default_alias": "Standard",
+                "profile": "NAFv4-ADMBw"
+              }
+            ],
+            "associations": [
+              {
+                "stereotype": "ConformsTo",
+                "uml_type": "Dependency",
+                "default_alias": "ConformsTo",
+                "profile": "NAFv4-ADMBw"
+              }
+            ]
+          },
+          {
+            "name": "Findings && Recommendations",
+            "elements": [
+              {
+                "stereotype": "Finding",
+                "uml_type": "Class",
+                "default_alias": "Finding",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "Recommendation",
+                "uml_type": "Class",
+                "default_alias": "Recommendation",
+                "profile": "NAFv4-ADMBw"
+              }
+            ],
+            "associations": [
+              {
+                "stereotype": "RealizesRecommendation",
+                "uml_type": "Realization",
+                "default_alias": "RealizesRecommendation",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "RefersTo",
+                "uml_type": "Dependency",
+                "default_alias": "RefersTo",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "ResultsFrom",
+                "uml_type": "Dependency",
+                "default_alias": "ResultsFrom",
+                "profile": "NAFv4-ADMBw"
+              }
+            ]
+          },
+          {
+            "name": "Stakeholder Concerns",
+            "elements": [
+              {
+                "stereotype": "ActualOrganization",
+                "uml_type": "Object",
+                "default_alias": "ActualOrganization",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "ActualPerson",
+                "uml_type": "Object",
+                "default_alias": "ActualPerson",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "ActualPost",
+                "uml_type": "Object",
+                "default_alias": "ActualPost",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "ActualProject",
+                "uml_type": "Object",
+                "default_alias": "ActualProject",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "Concern",
+                "uml_type": "Class",
+                "default_alias": "Concern",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "Organization",
+                "uml_type": "Class",
+                "default_alias": "Organization",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "Person",
+                "uml_type": "Class",
+                "default_alias": "Person",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "Post",
+                "uml_type": "Class",
+                "default_alias": "Post",
+                "profile": "NAFv4-ADMBw"
+              },
+              {
+                "stereotype": "Project",
+                "uml_type": "Class",
+                "default_alias": "Project",
+                "profile": "NAFv4-ADMBw"
+              }
+            ],
+            "associations": [
+              {
+                "stereotype": "StakeholderConcern",
+                "uml_type": "Dependency",
+                "default_alias": "StakeholderConcern",
+                "profile": "NAFv4-ADMBw"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "element_definitions": {
+    "FunctionalRequirement": {
+      "metatype": "FunctionalRequirement",
+      "alias": null,
+      "notes": "The element represents a functional requirement (what should the system / software be able to do?).",
+      "generalizes": "BWRequirement",
+      "base_stereotypes": "BWRequirement",
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Requirement",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "_tagGroupings": "Gewicht (absolut)=Automated;Uuid=Automated;Position=Automated;Object und Erg\u00e4nzungen=Automated;Phasen=Automated;Objectid=Automated;Markierung=Automated;Prozesswort=Automated;Kategorie=Automated;Bezug=Automated;Freitext=Automated;Detailstufe=Automated;Ansprechpartner=Automated;Akteur=Automated;AG_ID=Automated;Afo_ID=Automated;Qualit\u00e4t=Automated;Zu=Automated;Verbindlichkeit=Automated;Titelsperre=Automated;Subjekt=Automated;Status=Automated;Singular=Automated;Projektrolle=Automated;Randbedingung=Automated;Aktivit\u00e4t=Automated;Anforderung manuell=Automated;Bemerkung=Automated;Nachweisart=Automated;Vererbung=Automated;Regelungen=Automated;Hinweis=Automated;Rang=Automated;QS_Status=Required;Text=Required;Priorit\u00e4t Vergabe=Required;Kritikalit\u00e4t=Required;Operative Bewertung=Required;Anforderungsart=Required;",
+            "_tagGroups": "Automated,Required",
+            "_tagGroupStates": "Automated=closed;Required=open"
+          }
+        }
+      ],
+      "tagged_values": [],
+      "metaconstraints": []
+    },
+    "NonfunctionalRequirement": {
+      "metatype": "NonfunctionalRequirement",
+      "alias": null,
+      "notes": "The element represents a non-functional requirement (how should the system / software be able to do something?).",
+      "generalizes": "BWRequirement",
+      "base_stereotypes": "BWRequirement",
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Requirement",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "_tagGroupings": "Gewicht (absolut)=Automated;Uuid=Automated;Position=Automated;Object und Erg\u00e4nzungen=Automated;Phasen=Automated;Objectid=Automated;Markierung=Automated;Prozesswort=Automated;Kategorie=Automated;Bezug=Automated;Freitext=Automated;Detailstufe=Automated;Ansprechpartner=Automated;Akteur=Automated;AG_ID=Automated;Afo_ID=Automated;Qualit\u00e4t=Automated;Zu=Automated;Verbindlichkeit=Automated;Titelsperre=Automated;Subjekt=Automated;Status=Automated;Singular=Automated;Projektrolle=Automated;Randbedingung=Automated;Aktivit\u00e4t=Automated;Anforderung manuell=Automated;Bemerkung=Automated;Nachweisart=Automated;Vererbung=Automated;Regelungen=Automated;Hinweis=Automated;Rang=Automated;QS_Status=Required;Text=Required;Priorit\u00e4t Vergabe=Required;Kritikalit\u00e4t=Required;Operative Bewertung=Required;Anforderungsart=Required;",
+            "_tagGroups": "Automated,Required",
+            "_tagGroupStates": "Automated=closed;Required=open"
+          }
+        }
+      ],
+      "tagged_values": [],
+      "metaconstraints": []
+    },
+    "RequirementCatalogue": {
+      "metatype": "RequirementCatalogue",
+      "alias": null,
+      "notes": "Element represents a catalog of requirements, which consists of different categories (RequirementCategory) of functional and non-functional requirements.",
+      "generalizes": null,
+      "base_stereotypes": null,
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Class",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "isActive": ""
+          }
+        }
+      ],
+      "tagged_values": [],
+      "metaconstraints": []
+    },
+    "RequirementCategory": {
+      "metatype": "RequirementCategory",
+      "alias": null,
+      "notes": "Element represents a category of a catalog of requirements.",
+      "generalizes": null,
+      "base_stereotypes": null,
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Class",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "isActive": ""
+          }
+        }
+      ],
+      "tagged_values": [],
+      "metaconstraints": []
+    },
+    "Standard": {
+      "metatype": "Standard",
+      "alias": null,
+      "notes": "A ratified and peer-reviewed specification that is used to guide or constrain the architecture. A Standard may be applied to any element in the architecture.",
+      "generalizes": "PropertySet",
+      "base_stereotypes": "PropertySet SubjectOfForecast SysML1.4::block",
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Class",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "isActive": ""
+          }
+        }
+      ],
+      "tagged_values": [
+        {
+          "name": "AbstractionLevel",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "not set,0,1,2,3,4,5,6,R",
+          "default": ""
+        },
+        {
+          "name": "mandatedDate",
+          "type": "mandatedDate",
+          "description": "",
+          "unit": "",
+          "values": "",
+          "default": ""
+        },
+        {
+          "name": "retiredDate",
+          "type": "retiredDate",
+          "description": "",
+          "unit": "",
+          "values": "",
+          "default": ""
+        }
+      ],
+      "metaconstraints": []
+    },
+    "Finding": {
+      "metatype": "Finding",
+      "alias": null,
+      "notes": "An ascertainment made in the model, which relates to the methodology used, the subject under consideration, the tool or something else.",
+      "generalizes": null,
+      "base_stereotypes": null,
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Class",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "isActive": ""
+          }
+        }
+      ],
+      "tagged_values": [
+        {
+          "name": "Type",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "Method,Tool,Others,Subject",
+          "default": ""
+        }
+      ],
+      "metaconstraints": []
+    },
+    "Recommendation": {
+      "metatype": "Recommendation",
+      "alias": null,
+      "notes": "Need for action from a finding.",
+      "generalizes": null,
+      "base_stereotypes": null,
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Class",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "isActive": ""
+          }
+        }
+      ],
+      "tagged_values": [
+        {
+          "name": "Type",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "Method,Tool,Others,Subject",
+          "default": ""
+        }
+      ],
+      "metaconstraints": []
+    },
+    "ActualOrganization": {
+      "metatype": "ActualOrganization",
+      "alias": null,
+      "notes": "An actual formal or informal organizational unit, e.g. \"Driving and Vehicle Licensing Agency\", \"UAF team Alpha\".",
+      "generalizes": "ActualResponsibleResource",
+      "base_stereotypes": "ActualResponsibleResource",
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Object",
+          "properties": {
+            "_HideUmlLinks": "True"
+          }
+        }
+      ],
+      "tagged_values": [
+        {
+          "name": "serviceType",
+          "type": "String",
+          "description": "",
+          "unit": "",
+          "values": "",
+          "default": ""
+        },
+        {
+          "name": "shortName",
+          "type": "String",
+          "description": "",
+          "unit": "",
+          "values": "",
+          "default": ""
+        }
+      ],
+      "metaconstraints": [
+        {
+          "uml_role": "classifier",
+          "constraint": "NAFv4-ADMBw::Organization"
+        }
+      ]
+    },
+    "ActualPerson": {
+      "metatype": "ActualPerson",
+      "alias": null,
+      "notes": "An individual human being.",
+      "generalizes": "ActualResponsibleResource",
+      "base_stereotypes": "ActualResponsibleResource",
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Object",
+          "properties": {
+            "_HideUmlLinks": "True"
+          }
+        }
+      ],
+      "tagged_values": [],
+      "metaconstraints": [
+        {
+          "uml_role": "classifier",
+          "constraint": "NAFv4-ADMBw::Person"
+        }
+      ]
+    },
+    "ActualPost": {
+      "metatype": "ActualPost",
+      "alias": null,
+      "notes": "An actual, specific post, an instance of a Post \"type\" - e.g., \"President of the United States of America.\" where the Post would be president.",
+      "generalizes": "ActualResponsibleResource",
+      "base_stereotypes": "ActualResponsibleResource",
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Object",
+          "properties": {
+            "_HideUmlLinks": "True"
+          }
+        }
+      ],
+      "tagged_values": [],
+      "metaconstraints": [
+        {
+          "uml_role": "classifier",
+          "constraint": "NAFv4-ADMBw::Post"
+        }
+      ]
+    },
+    "ActualProject": {
+      "metatype": "ActualProject",
+      "alias": null,
+      "notes": "A time-limited endeavor to provide a specific set of ActualResource that meet specific Capability needs.",
+      "generalizes": "Achiever",
+      "base_stereotypes": "Achiever ActualOrganizationalResource",
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Object",
+          "properties": {
+            "_HideUmlLinks": "True"
+          }
+        }
+      ],
+      "tagged_values": [
+        {
+          "name": "endDate",
+          "type": "endDate",
+          "description": "",
+          "unit": "",
+          "values": "",
+          "default": ""
+        },
+        {
+          "name": "project-ID",
+          "type": "",
+          "description": "",
+          "unit": "",
+          "values": "",
+          "default": ""
+        },
+        {
+          "name": "projectKind",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "Programme,Portfolio,PersonnelDevelopment",
+          "default": ""
+        },
+        {
+          "name": "projectShortTitle",
+          "type": "",
+          "description": "",
+          "unit": "",
+          "values": "",
+          "default": ""
+        },
+        {
+          "name": "startDate",
+          "type": "startDate",
+          "description": "",
+          "unit": "",
+          "values": "",
+          "default": ""
+        }
+      ],
+      "metaconstraints": [
+        {
+          "uml_role": "classifier",
+          "constraint": "NAFv4-ADMBw::Project"
+        },
+        {
+          "uml_role": "definingFeature",
+          "constraint": "NAFv4-ADMBw::ProjectRole"
+        }
+      ]
+    },
+    "Concern": {
+      "metatype": "Concern",
+      "alias": null,
+      "notes": "Interest in an EnterprisePhase (EnterprisePhase is synonym for System in ISO 42010) relevant to one or more of its stakeholders.",
+      "generalizes": "PropertySet",
+      "base_stereotypes": "PropertySet SysML1.4::block",
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Class",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "isActive": ""
+          }
+        }
+      ],
+      "tagged_values": [],
+      "metaconstraints": []
+    },
+    "Organization": {
+      "metatype": "Organization",
+      "alias": null,
+      "notes": "A group of OrganizationalResources (Persons, Posts, Organizations and Responsibilities) associated for a particular purpose.",
+      "generalizes": "OrganizationalResource",
+      "base_stereotypes": "OrganizationalResource",
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Class",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "isActive": ""
+          }
+        }
+      ],
+      "tagged_values": [],
+      "metaconstraints": []
+    },
+    "Person": {
+      "metatype": "Person",
+      "alias": null,
+      "notes": "A type of a human being used to define the characteristics that need to be described for ActualPersons (e.g. properties such as address, telephone number, nationality, etc).",
+      "generalizes": "OrganizationalResource",
+      "base_stereotypes": "OrganizationalResource",
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Class",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "isActive": ""
+          }
+        }
+      ],
+      "tagged_values": [],
+      "metaconstraints": []
+    },
+    "Post": {
+      "metatype": "Post",
+      "alias": null,
+      "notes": "A type of job title or position that a person can fill (e.g. Lawyer, Solution Architect, Machine Operator or Chief Executive Officer).",
+      "generalizes": "OrganizationalResource",
+      "base_stereotypes": "OrganizationalResource",
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Class",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "isActive": ""
+          }
+        }
+      ],
+      "tagged_values": [],
+      "metaconstraints": []
+    },
+    "Project": {
+      "metatype": "Project",
+      "alias": null,
+      "notes": "A type that describes types of time-limited endeavours that are required to meet one or more Capability needs.",
+      "generalizes": "OrganizationalResource",
+      "base_stereotypes": "OrganizationalResource SysML1.4::block",
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Class",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "isActive": ""
+          }
+        }
+      ],
+      "tagged_values": [
+        {
+          "name": "Architectural guidelines of the Federal Government",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "ber\u00fccksichitigt,nicht ber\u00fccksichtigt,teilweise ber\u00fccksichtigt,keine Relevanz,not set",
+          "default": ""
+        },
+        {
+          "name": "Catalogue usage",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "Ja,Nein,keine Relevanz,not set",
+          "default": ""
+        },
+        {
+          "name": "Criteria of architecture quality fulfilled",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "Ja,Teilweise,Nein,keine Relevanz,not set",
+          "default": ""
+        },
+        {
+          "name": "Implemented SASPF specification",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "Ja,Nein,keine Relevanz,not set",
+          "default": ""
+        },
+        {
+          "name": "Implementing Change Management",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "CPM,RfC bei I1.4,Changeprozess SASPF,kein,keine Relevanz,not set",
+          "default": ""
+        },
+        {
+          "name": "Modeling according to PlgABw",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "Ja,Nein,keine Relevanz,not set",
+          "default": ""
+        },
+        {
+          "name": "Modeling according to SysArch IT-SysBw",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "Ja,Nein,keine Relevanz,not set",
+          "default": ""
+        },
+        {
+          "name": "OpArch (FFF) existing",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "zu erstellen,Ja (gem\u00e4\u00df Vorgaben),Ja (methodische M\u00e4ngel),Ja (inhaltliche M\u00e4ngel),Ja (methodische & inhaltliche M\u00e4ngel),Nein,keine Relevant,not set",
+          "default": ""
+        },
+        {
+          "name": "SDP existing",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "zu erstellen,Ja (gem\u00e4\u00df Vorgaben),Ja (methodische M\u00e4ngel),Ja (inhaltliche M\u00e4ngel),Ja (methodische & inhaltliche M\u00e4ngel),Nein,keine Relevant,not set",
+          "default": ""
+        },
+        {
+          "name": "Service docum. according to IT-Service Designer Bw",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "Ja,Nein,keine Relevanz,not set",
+          "default": ""
+        },
+        {
+          "name": "SIR existing",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "zu erstellen,Ja (gem\u00e4\u00df Vorgaben),Ja (methodische M\u00e4ngel),Ja (inhaltliche M\u00e4ngel),Ja (methodische & inhaltliche M\u00e4ngel),Nein,keine Relevant,not set",
+          "default": ""
+        },
+        {
+          "name": "SSO existing",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "zu erstellen,Ja (gem\u00e4\u00df Vorgaben),Ja (methodische M\u00e4ngel),Ja (inhaltliche M\u00e4ngel),Ja (methodische & inhaltliche M\u00e4ngel),Nein,keine Relevant,not set",
+          "default": ""
+        },
+        {
+          "name": "Systemsteckbrief (GeNu) existing",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "zu erstellen,Ja (gem\u00e4\u00df Vorgaben),Ja (methodische M\u00e4ngel),Ja (inhaltliche M\u00e4ngel),Ja (methodische & inhaltliche M\u00e4ngel),Nein,keine Relevant,not set",
+          "default": ""
+        },
+        {
+          "name": "Systemsteckbrief (LV) existing",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "zu erstellen,Ja (gem\u00e4\u00df Vorgaben),Ja (methodische M\u00e4ngel),Ja (inhaltliche M\u00e4ngel),Ja (methodische & inhaltliche M\u00e4ngel),Nein,keine Relevant,not set",
+          "default": ""
+        },
+        {
+          "name": "Used templates and specifications for SIR",
+          "type": "String",
+          "description": "",
+          "unit": "",
+          "values": "",
+          "default": ""
+        },
+        {
+          "name": "Used templates and specifications for SSO",
+          "type": "String",
+          "description": "",
+          "unit": "",
+          "values": "",
+          "default": ""
+        },
+        {
+          "name": "Used templates for FFF",
+          "type": "String",
+          "description": "",
+          "unit": "",
+          "values": "",
+          "default": ""
+        },
+        {
+          "name": "Used templates for GeNu",
+          "type": "String",
+          "description": "",
+          "unit": "",
+          "values": "",
+          "default": ""
+        },
+        {
+          "name": "Used templates for LV",
+          "type": "String",
+          "description": "",
+          "unit": "",
+          "values": "",
+          "default": ""
+        },
+        {
+          "name": "Used templates for SDP",
+          "type": "String",
+          "description": "",
+          "unit": "",
+          "values": "",
+          "default": ""
+        }
+      ],
+      "metaconstraints": []
+    },
+    "Classification": {
+      "metatype": "Classification",
+      "alias": null,
+      "notes": "Classification according to STANAG 1059.",
+      "generalizes": null,
+      "base_stereotypes": null,
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Class",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "isActive": ""
+          }
+        }
+      ],
+      "tagged_values": [
+        {
+          "name": "Definition",
+          "type": "String",
+          "description": "",
+          "unit": "",
+          "values": "",
+          "default": ""
+        },
+        {
+          "name": "Responsibility",
+          "type": "STANAG 1059 NATO-Country Codes",
+          "description": "",
+          "unit": "",
+          "values": "",
+          "default": ""
+        }
+      ],
+      "metaconstraints": []
+    },
+    "DocumentReference": {
+      "metatype": "DocumentReference",
+      "alias": null,
+      "notes": "The element describes a regulation, instruction or a general document.",
+      "generalizes": "Reference",
+      "base_stereotypes": "Reference",
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Class",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "isActive": ""
+          }
+        }
+      ],
+      "tagged_values": [],
+      "metaconstraints": []
+    },
+    "OperationalConstraint": {
+      "metatype": "OperationalConstraint",
+      "alias": null,
+      "notes": "A Rule governing a logical architectural element i.e. OperationalPerformer, OperationalActivity, InformationElement etc.",
+      "generalizes": "Rule",
+      "base_stereotypes": "Rule",
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Class",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "isActive": ""
+          }
+        }
+      ],
+      "tagged_values": [
+        {
+          "name": "AbstractionLevel",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "not set,0,1,2,3,4,5,6,R",
+          "default": ""
+        },
+        {
+          "name": "Id",
+          "type": "String",
+          "description": "Lesbare laufende Nummerierung f\u00fcr den Forderungskatalog",
+          "unit": "",
+          "values": "",
+          "default": ""
+        },
+        {
+          "name": "Uuid",
+          "type": "String",
+          "description": "Maschinenlesbare Nummerierung f\u00fcr das Requirements Management Tool",
+          "unit": "",
+          "values": "",
+          "default": ""
+        }
+      ],
+      "metaconstraints": []
+    },
+    "Reference": {
+      "metatype": "Reference",
+      "alias": null,
+      "notes": "Element describes all types of references.",
+      "generalizes": null,
+      "base_stereotypes": null,
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Class",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "isActive": ""
+          }
+        }
+      ],
+      "tagged_values": [
+        {
+          "name": "Date",
+          "type": "Date",
+          "description": "",
+          "unit": "",
+          "values": "",
+          "default": ""
+        }
+      ],
+      "metaconstraints": []
+    },
+    "ResourceConstraint": {
+      "metatype": "ResourceConstraint",
+      "alias": null,
+      "notes": "A rule governing the structural or functional aspects of an implementation.",
+      "generalizes": "Rule",
+      "base_stereotypes": "Rule",
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Class",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "isActive": ""
+          }
+        }
+      ],
+      "tagged_values": [],
+      "metaconstraints": []
+    },
+    "ServicePolicy": {
+      "metatype": "ServicePolicy",
+      "alias": null,
+      "notes": "A constraint governing the use of one or more ServiceSpecifications.",
+      "generalizes": "Rule",
+      "base_stereotypes": "Rule",
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Class",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "isActive": ""
+          }
+        }
+      ],
+      "tagged_values": [],
+      "metaconstraints": []
+    },
+    "SMEReference": {
+      "metatype": "SMEReference",
+      "alias": null,
+      "notes": "Element stands for a result of a workshop or expert knowledge.",
+      "generalizes": "Reference",
+      "base_stereotypes": "Reference",
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Class",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "isActive": ""
+          }
+        }
+      ],
+      "tagged_values": [],
+      "metaconstraints": []
+    },
+    "FitCriterion": {
+      "metatype": "FitCriterion",
+      "alias": null,
+      "notes": "This element represents an acceptance criterion for a functional or non-functional requirement.",
+      "generalizes": null,
+      "base_stereotypes": null,
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Class",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "isActive": ""
+          }
+        }
+      ],
+      "tagged_values": [
+        {
+          "name": "text",
+          "type": "String",
+          "description": "",
+          "unit": "",
+          "values": "",
+          "default": ""
+        }
+      ],
+      "metaconstraints": []
+    },
+    "FulfilmentCriterion": {
+      "metatype": "FulfilmentCriterion",
+      "alias": null,
+      "notes": "This element represents a criterion for evaluating the degree of implementation of a functional or non-functional requirement.",
+      "generalizes": null,
+      "base_stereotypes": null,
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Class",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "isActive": ""
+          }
+        }
+      ],
+      "tagged_values": [
+        {
+          "name": "text",
+          "type": "String",
+          "description": "",
+          "unit": "",
+          "values": "",
+          "default": ""
+        }
+      ],
+      "metaconstraints": []
+    },
+    "ServiceFunction": {
+      "metatype": "ServiceFunction",
+      "alias": null,
+      "notes": "An Activity that describes the abstract behavior of ServiceSpecifications, regardless of the actual implementation.",
+      "generalizes": "BusinessProcess",
+      "base_stereotypes": "BusinessProcess",
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Activity",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "isReadOnly": "false",
+            "isSingleExecution": "",
+            "parameterName": "",
+            "postcondition": "",
+            "precondition": ""
+          }
+        }
+      ],
+      "tagged_values": [
+        {
+          "name": "AbstractionLevel",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "not set,0,1,2,3,4,5,6,R",
+          "default": ""
+        },
+        {
+          "name": "ITSD_UtilityUsage",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "not set,IT-Service,IT-Anwender,Betrieb,IT-Service/IT-Anwender,IT-Service/Betrieb,IT-Anwender/Betrieb,IT-Service/IT-Anwender/Betrieb",
+          "default": "not set"
+        }
+      ],
+      "metaconstraints": [
+        {
+          "uml_role": "ownedParameter",
+          "constraint": "NAFv4-ADMBw::ServiceParameter"
+        }
+      ]
+    },
+    "ServiceInterface": {
+      "metatype": "ServiceInterface",
+      "alias": null,
+      "notes": "A contract that defines the ServiceMethods and ServiceMessageHandlers that the ServiceSpecification realizes.",
+      "generalizes": "PropertySet",
+      "base_stereotypes": "PropertySet",
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Class",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "isActive": ""
+          }
+        }
+      ],
+      "tagged_values": [],
+      "metaconstraints": [
+        {
+          "uml_role": "ownedOperation",
+          "constraint": "NAFv4-ADMBw::ServiceMethod"
+        }
+      ]
+    },
+    "ServiceSpecification": {
+      "metatype": "ServiceSpecification",
+      "alias": null,
+      "notes": "The specification of a set of functionality provided one element for the use of others.",
+      "generalizes": "Achiever",
+      "base_stereotypes": "Achiever CapableElement PropertySet SysML1.4::block VersionedElement",
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Class",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "isActive": ""
+          }
+        }
+      ],
+      "tagged_values": [
+        {
+          "name": "AbstractionLevel",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "not set,0,1,2,3,4,5,6,R",
+          "default": ""
+        },
+        {
+          "name": "Approved service tailoring",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "Ja,noch offen,nicht erforderlich,Nein,keine Relevanz,not set",
+          "default": ""
+        },
+        {
+          "name": "Critical service",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "Ja,Nein,keine Relevanz,not set",
+          "default": ""
+        },
+        {
+          "name": "Kind of robustness",
+          "type": "String",
+          "description": "",
+          "unit": "",
+          "values": "",
+          "default": ""
+        },
+        {
+          "name": "Measure for robustness",
+          "type": "String",
+          "description": "",
+          "unit": "",
+          "values": "",
+          "default": ""
+        },
+        {
+          "name": "Minimization of dependencies",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "Ja,Nein,keine Relevanz,not set",
+          "default": ""
+        },
+        {
+          "name": "Service with mission reference",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "Ja,Nein,keine Relevanz,not set",
+          "default": ""
+        },
+        {
+          "name": "Status",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "geplant,not set,realisiert",
+          "default": ""
+        }
+      ],
+      "metaconstraints": [
+        {
+          "uml_role": "ownedOperation",
+          "constraint": "NAFv4-ADMBw::ServiceMethod"
+        },
+        {
+          "uml_role": "ownedPort",
+          "constraint": "NAFv4-ADMBw::ServicePort"
+        }
+      ]
+    },
+    "ServiceSpecificationRole": {
+      "metatype": "ServiceSpecificationRole",
+      "alias": null,
+      "notes": "An assertion that a ServiceSecification calls upon another ServiceSpecification in order to deliver its stated functionality.",
+      "generalizes": "InteractionRole",
+      "base_stereotypes": "InteractionRole MeasurableElement",
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Part",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "isReference": "false"
+          }
+        }
+      ],
+      "tagged_values": [],
+      "metaconstraints": [
+        {
+          "uml_role": "class",
+          "constraint": "NAFv4-ADMBw::ServiceSpecification"
+        },
+        {
+          "uml_role": "type",
+          "constraint": "NAFv4-ADMBw::ServiceSpecification"
+        }
+      ]
+    },
+    "CapabilityConfiguration": {
+      "metatype": "CapabilityConfiguration",
+      "alias": null,
+      "notes": "A composite structure representing the physical and human resources (and their interactions) in an enterprise, assembled to meet a capability).",
+      "generalizes": "ResourceArchitecture",
+      "base_stereotypes": "ResourceArchitecture",
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Class",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "isActive": ""
+          }
+        }
+      ],
+      "tagged_values": [
+        {
+          "name": "AbstractionLevel",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "not set,0,1,2,3,4,5,6,R",
+          "default": ""
+        },
+        {
+          "name": "Avoiding redundancy in IT-SysBw",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "gegeben,nicht gegeben (bewusst),nicht gegeben (Harmonisierung geplant),keine Relevanz,not set",
+          "default": ""
+        },
+        {
+          "name": "Avoids provider monopoly",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "Ja,Nein,keine Relevanz,not set",
+          "default": ""
+        },
+        {
+          "name": "Client separation",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "Rechte- und Rollenmanagement,dedizierte virtuelle Server,dedizierte Plattenpartitionen,dedizierte virtuelle LANs,unterschiedliche Verschl\u00fcsselung in den Datenbereichen,physische Trennung,keine,keine Relevanz,not set",
+          "default": ""
+        },
+        {
+          "name": "Environmentally friendly and sustainable",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "Ja,Nein,keine Relevanz,not set",
+          "default": ""
+        },
+        {
+          "name": "Fulfilled C5 requirements catalogue of the BSI",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "Ja,Nein,keine Relevanz,not set",
+          "default": ""
+        },
+        {
+          "name": "Geodata and geoservices",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "Standard-konform,nicht Standard-konform,keine Relevanz,not set",
+          "default": ""
+        },
+        {
+          "name": "IT-Planning board involved",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "Ja (Einbindung erfolgt),Nein (Einbindung nicht erfolgt),nicht erforderlich,keine Relevanz,not set",
+          "default": ""
+        },
+        {
+          "name": "NdB usage",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "Ja (entsprechend vorgesehener Art und Weise),Ja (mit Abweichungen),Nein,keine Relevanz,not set",
+          "default": ""
+        },
+        {
+          "name": "RDF usage",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "Ja,Nein,keine Relevanz,not set",
+          "default": ""
+        },
+        {
+          "name": "Reference architectures",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "ber\u00fccksichitigt,nicht ber\u00fccksichtigt,teilweise ber\u00fccksichtigt,keine verf\u00fcgbar,keine Relevant,not set",
+          "default": ""
+        },
+        {
+          "name": "Reusability of existing solutions",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "Ja,teilweise Wiederverwendung,keine Wiederverwendung,keine L\u00f6sungen vorhanden,keine Relevanz,not set",
+          "default": ""
+        },
+        {
+          "name": "Security-by-Default",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "Ja,Nein,keine Relevanz,not set",
+          "default": ""
+        },
+        {
+          "name": "String.Latin character set",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "Ja,Nein,keine Relevanz,not set",
+          "default": ""
+        },
+        {
+          "name": "Usability and accessibility",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "Ja,Nein,nur benutzerfreundlich,nur barrierefrei,keine Relevanz,not set",
+          "default": ""
+        },
+        {
+          "name": "UTF-8 character set",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "Ja,Nein,keine Relevanz,not set",
+          "default": ""
+        }
+      ],
+      "metaconstraints": []
+    },
+    "Function": {
+      "metatype": "Function",
+      "alias": null,
+      "notes": "An Activity which is specified in the context to the ResourcePerformer (human or machine) that IsCapableToPerform it.",
+      "generalizes": "BusinessProcess",
+      "base_stereotypes": "BusinessProcess SubjectOfResourceConstraint",
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Activity",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "isReadOnly": "false",
+            "isSingleExecution": "",
+            "parameterName": "",
+            "postcondition": "",
+            "precondition": ""
+          }
+        }
+      ],
+      "tagged_values": [
+        {
+          "name": "AbstractionLevel",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "not set,0,1,2,3,4,5,6,R",
+          "default": ""
+        }
+      ],
+      "metaconstraints": []
+    },
+    "NaturalResource": {
+      "metatype": "NaturalResource",
+      "alias": null,
+      "notes": "Type of physical resource that occurs in nature.",
+      "generalizes": "PhysicalResource",
+      "base_stereotypes": "PhysicalResource",
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Class",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "isActive": ""
+          }
+        }
+      ],
+      "tagged_values": [],
+      "metaconstraints": []
+    },
+    "ResourceArchitecture": {
+      "metatype": "ResourceArchitecture",
+      "alias": null,
+      "notes": "A type used to denote a model of the Architecture, described from the ResourcePerformer perspective.",
+      "generalizes": "Architecture",
+      "base_stereotypes": "Architecture ResourcePerformer",
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Class",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "isActive": ""
+          }
+        }
+      ],
+      "tagged_values": [
+        {
+          "name": "materialPlanningNumber",
+          "type": "",
+          "description": "",
+          "unit": "",
+          "values": "",
+          "default": ""
+        }
+      ],
+      "metaconstraints": []
+    },
+    "ResourceArtifact": {
+      "metatype": "ResourceArtifact",
+      "alias": null,
+      "notes": "A type of man-made object that contains no human beings (i.e. satellite, radio, petrol, gasoline, etc.).",
+      "generalizes": "PhysicalResource",
+      "base_stereotypes": "PhysicalResource",
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Class",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "isActive": ""
+          }
+        }
+      ],
+      "tagged_values": [
+        {
+          "name": "materialPlanningNumber",
+          "type": "",
+          "description": "",
+          "unit": "",
+          "values": "",
+          "default": ""
+        },
+        {
+          "name": "Scalability",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "scale up (vertikal),scale out (horizontal),keine Skalierung,keine Relevanz,not set",
+          "default": ""
+        },
+        {
+          "name": "Scaling method",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "Sharding,Clustering,Partitionierung,keine,keine Relevanz,not set",
+          "default": ""
+        },
+        {
+          "name": "Type of scalability",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "keine Skalierung,Lastskalierbarkeit,r\u00e4umliche Skalierung,zeitlich-r\u00e4umliche Skalierung,strukturelle Skalierung,keine Relevanz,not set",
+          "default": ""
+        }
+      ],
+      "metaconstraints": []
+    },
+    "ResourceInterface": {
+      "metatype": "ResourceInterface",
+      "alias": null,
+      "notes": "A declaration that specifies a contract between the ResourcePerformers it is related to and any other ResourcePerformers it can interact with. It is also intended to be an implementation of a specification of an Interface in the Business and/or Service layer.",
+      "generalizes": "PropertySet",
+      "base_stereotypes": "PropertySet SysML1.4::InterfaceBlock",
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Class",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "isActive": ""
+          }
+        }
+      ],
+      "tagged_values": [],
+      "metaconstraints": []
+    },
+    "Software": {
+      "metatype": "Software",
+      "alias": null,
+      "notes": "A sub-type of ResourceArtifact that specifies an executable computer program.",
+      "generalizes": "ResourceArtifact",
+      "base_stereotypes": "ResourceArtifact",
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Class",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "isActive": ""
+          }
+        }
+      ],
+      "tagged_values": [
+        {
+          "name": "Role model in IAM",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "Vollst\u00e4ndig,Teilweise,Nein,keine Relevanz,not set",
+          "default": ""
+        },
+        {
+          "name": "Scalable (on infrastructure)",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "Ja,Nein,keine Relevanz,not set",
+          "default": ""
+        },
+        {
+          "name": "Scaling method",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "Sharding,Clustering,Partitionierung,keine,keine Relevanz,not set",
+          "default": ""
+        }
+      ],
+      "metaconstraints": []
+    },
+    "System": {
+      "metatype": "System",
+      "alias": null,
+      "notes": "An integrated set of elements, subsystems, or assemblies that accomplish a defined objective. These elements include products (hardware, software, firmware), processes, people, information, techniques, facilities, services, and other support elements (INCOSE SE Handbook V4, 2015).",
+      "generalizes": "ResourceArchitecture",
+      "base_stereotypes": "ResourceArchitecture",
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Class",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "isActive": ""
+          }
+        }
+      ],
+      "tagged_values": [],
+      "metaconstraints": []
+    },
+    "Protocol": {
+      "metatype": "Protocol",
+      "alias": null,
+      "notes": "A Standard for communication over a network. Protocols may be composite, represented as a ProtocolStack made up of ProtocolLayers.",
+      "generalizes": "Standard",
+      "base_stereotypes": "Standard",
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Class",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "isActive": ""
+          }
+        }
+      ],
+      "tagged_values": [],
+      "metaconstraints": []
+    },
+    "Protocolstack": {
+      "metatype": "Protocolstack",
+      "alias": null,
+      "notes": "A sub type of Protocol that contains the ProtocolLayers, defining a complete stack.",
+      "generalizes": "Protocol",
+      "base_stereotypes": "Protocol",
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Class",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "isActive": ""
+          }
+        }
+      ],
+      "tagged_values": [],
+      "metaconstraints": []
+    },
+    "Measurement": {
+      "metatype": "Measurement",
+      "alias": null,
+      "notes": "A property of an element representing something in the physical world, expressed in amounts of a unit of measure.",
+      "generalizes": "MeasurableElement",
+      "base_stereotypes": "MeasurableElement",
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Part",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "isReference": "false"
+          }
+        }
+      ],
+      "tagged_values": [
+        {
+          "name": "ITSD_ServiceClass",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "not set,Serviceklasse 1,Serviceklasse 2,Serviceklasse 3",
+          "default": "not set"
+        }
+      ],
+      "metaconstraints": [
+        {
+          "uml_role": "class",
+          "constraint": "NAFv4-ADMBw::PropertySet"
+        },
+        {
+          "uml_role": "type",
+          "constraint": "NAFv4-ADMBw::MeasurementType"
+        }
+      ]
+    },
+    "MeasurementType": {
+      "metatype": "MeasurementType",
+      "alias": null,
+      "notes": "A type of a property representing something in the physical world, expressed in amounts of a unit of measure.",
+      "generalizes": null,
+      "base_stereotypes": null,
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Class",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "_tagGroupings": "Capacity=ITSD;Continuity=ITSD;Security=ITSD;Availability=ITSD;",
+            "_tagGroups": "ITSD",
+            "_tagGroupStates": "ITSD=closed;",
+            "isActive": ""
+          }
+        }
+      ],
+      "tagged_values": [
+        {
+          "name": "ITSD_Group",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "Individuelle Serviceeigenschaft,Kontinuit\u00e4t,Kapazit\u00e4t,Sicherheit,Verf\u00fcgbarkeit",
+          "default": "Individuelle Serviceeigenschaft"
+        }
+      ],
+      "metaconstraints": []
+    }
+  },
+  "association_definitions": {
+    "PartOfCatalogue": {
+      "metatype": "PartOfCatalogue",
+      "alias": null,
+      "notes": "This relation states that a category (RequirementCategory) belongs to a requirements catalog (RequirementCatalogue).",
+      "generalizes": null,
+      "base_stereotypes": null,
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Aggregation",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "_MeaningBackwards": "PartOfCatalogue",
+            "_MeaningForwards": "PartOfCatalogue",
+            "direction": "Source -> Destination"
+          }
+        }
+      ],
+      "tagged_values": [],
+      "metaconstraints": [
+        {
+          "uml_role": "source",
+          "constraint": "NAFv4-ADMBw::RequirementCategory"
+        },
+        {
+          "uml_role": "target",
+          "constraint": "NAFv4-ADMBw::RequirementCatalogue"
+        }
+      ]
+    },
+    "PartOfCategory": {
+      "metatype": "PartOfCategory",
+      "alias": null,
+      "notes": "This relation states that his functional or non-functional requirement belongs to a category (RequirementCategory) of the requirements catalog.",
+      "generalizes": null,
+      "base_stereotypes": null,
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Aggregation",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "_MeaningBackwards": "PartOfCategory",
+            "_MeaningForwards": "PartOfCategory",
+            "direction": "Source -> Destination"
+          }
+        }
+      ],
+      "tagged_values": [],
+      "metaconstraints": [
+        {
+          "uml_role": "source",
+          "constraint": "NAFv4-ADMBw::BWRequirement;NAFv4-ADMBw::RequirementCategory"
+        },
+        {
+          "uml_role": "target",
+          "constraint": "NAFv4-ADMBw::RequirementCategory"
+        }
+      ]
+    },
+    "ConformsTo": {
+      "metatype": "ConformsTo",
+      "alias": null,
+      "notes": "A relationship that expresses that an UAFElement conforms to a standard.",
+      "generalizes": null,
+      "base_stereotypes": null,
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Dependency",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "_MeaningBackwards": "ConformsTo",
+            "_MeaningForwards": "ConformsTo",
+            "direction": "Source -> Destination"
+          }
+        }
+      ],
+      "tagged_values": [],
+      "metaconstraints": [
+        {
+          "uml_role": "client",
+          "constraint": "NAFv4-ADMBw::UAFElement"
+        },
+        {
+          "uml_role": "supplier",
+          "constraint": "NAFv4-ADMBw::Standard"
+        }
+      ]
+    },
+    "RealizesRecommendation": {
+      "metatype": "RealizesRecommendation",
+      "alias": null,
+      "notes": "Relation states that a Recommendation is realized through this element.",
+      "generalizes": null,
+      "base_stereotypes": null,
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Realisation",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "_MeaningBackwards": "RealizesRecommendation",
+            "_MeaningForwards": "RealizesRecommendation",
+            "direction": "Source -> Destination"
+          }
+        }
+      ],
+      "tagged_values": [],
+      "metaconstraints": [
+        {
+          "uml_role": "client",
+          "constraint": "NAFv4-ADMBw::UAFElement"
+        },
+        {
+          "uml_role": "supplier",
+          "constraint": "NAFv4-ADMBw::Recommendation"
+        }
+      ]
+    },
+    "RefersTo": {
+      "metatype": "RefersTo",
+      "alias": null,
+      "notes": "Relationship that assigns a finding to a recommendation.",
+      "generalizes": null,
+      "base_stereotypes": null,
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Dependency",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "_MeaningBackwards": "RefersTo",
+            "_MeaningForwards": "RefersTo",
+            "direction": "Source -> Destination"
+          }
+        }
+      ],
+      "tagged_values": [],
+      "metaconstraints": [
+        {
+          "uml_role": "client",
+          "constraint": "NAFv4-ADMBw::Recommendation"
+        },
+        {
+          "uml_role": "supplier",
+          "constraint": "NAFv4-ADMBw::Finding"
+        }
+      ]
+    },
+    "ResultsFrom": {
+      "metatype": "ResultsFrom",
+      "alias": null,
+      "notes": "Relationship expresses that an element of architecture is the reason for a finding.",
+      "generalizes": null,
+      "base_stereotypes": null,
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Dependency",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "_MeaningBackwards": "ResultsFrom",
+            "_MeaningForwards": "ResultsFrom",
+            "direction": "Source -> Destination"
+          }
+        }
+      ],
+      "tagged_values": [
+        {
+          "name": "Type",
+          "type": "enumeration",
+          "description": "",
+          "unit": "",
+          "values": "Method,Tool,Others,Subject",
+          "default": ""
+        }
+      ],
+      "metaconstraints": [
+        {
+          "uml_role": "client",
+          "constraint": "NAFv4-ADMBw::Finding"
+        },
+        {
+          "uml_role": "supplier",
+          "constraint": "BPMN2.0::EndEvent;BPMN2.0::Gateway;BPMN2.0::IntermediateEvent;BPMN2.0::Lane;BPMN2.0::Pool;BPMN2.0::StartEvent;NAFv4-ADMBw::Classification;NAFv4-ADMBw::FunctionalRequirement;NAFv4-ADMBw::Measurement;NAFv4-ADMBw::MeasurementType;NAFv4-ADMBw::NonfunctionalRequirement;NAFv4-ADMBw::Reference;NAFv4-ADMBw::RequirementCatalogue;NAFv4-ADMBw::RequirementCategory;NAFv4-ADMBw::UAFElement"
+        }
+      ]
+    },
+    "StakeholderConcern": {
+      "metatype": "StakeholderConcern",
+      "alias": null,
+      "notes": "A relationship that expresses which concern a stakeholder has.",
+      "generalizes": null,
+      "base_stereotypes": null,
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Dependency",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "_MeaningBackwards": "StakeholderConcern",
+            "_MeaningForwards": "StakeholderConcern",
+            "direction": "Source -> Destination"
+          }
+        }
+      ],
+      "tagged_values": [],
+      "metaconstraints": [
+        {
+          "uml_role": "client",
+          "constraint": "NAFv4-ADMBw::Stakeholder"
+        },
+        {
+          "uml_role": "supplier",
+          "constraint": "NAFv4-ADMBw::Concern"
+        }
+      ]
+    },
+    "ConflictsWith": {
+      "metatype": "ConflictsWith",
+      "alias": null,
+      "notes": "Relation that represents a conflict between two requirements.",
+      "generalizes": null,
+      "base_stereotypes": null,
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Dependency",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "_MeaningBackwards": "ConflictsWith",
+            "_MeaningForwards": "ConflictsWith",
+            "direction": "Source -> Destination"
+          }
+        }
+      ],
+      "tagged_values": [],
+      "metaconstraints": [
+        {
+          "uml_role": "client",
+          "constraint": "NAFv4-ADMBw::BWRequirement"
+        },
+        {
+          "uml_role": "supplier",
+          "constraint": "NAFv4-ADMBw::BWRequirement"
+        }
+      ]
+    },
+    "IsDuplicateOf": {
+      "metatype": "IsDuplicateOf",
+      "alias": null,
+      "notes": "Relation that represents that two requirements convey the same content.",
+      "generalizes": null,
+      "base_stereotypes": null,
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Dependency",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "_MeaningBackwards": "IsDuplicateOf",
+            "_MeaningForwards": "IsDuplicateOf",
+            "direction": "Source -> Destination"
+          }
+        }
+      ],
+      "tagged_values": [],
+      "metaconstraints": [
+        {
+          "uml_role": "client",
+          "constraint": "NAFv4-ADMBw::BWRequirement"
+        },
+        {
+          "uml_role": "supplier",
+          "constraint": "NAFv4-ADMBw::BWRequirement"
+        }
+      ]
+    },
+    "Refines": {
+      "metatype": "Refines",
+      "alias": null,
+      "notes": "Relation that represents a refinement of a requirement by another requirement.",
+      "generalizes": null,
+      "base_stereotypes": null,
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Dependency",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "_MeaningBackwards": "Refines",
+            "_MeaningForwards": "Refines",
+            "direction": "Source -> Destination"
+          }
+        }
+      ],
+      "tagged_values": [],
+      "metaconstraints": [
+        {
+          "uml_role": "client",
+          "constraint": "NAFv4-ADMBw::BWRequirement"
+        },
+        {
+          "uml_role": "supplier",
+          "constraint": "NAFv4-ADMBw::BWRequirement"
+        }
+      ]
+    },
+    "Replaces": {
+      "metatype": "Replaces",
+      "alias": null,
+      "notes": "Relation that represents a replacement of a requirement with another requirement.",
+      "generalizes": null,
+      "base_stereotypes": null,
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Dependency",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "_MeaningBackwards": "Replaces",
+            "_MeaningForwards": "Replaces",
+            "direction": "Source -> Destination"
+          }
+        }
+      ],
+      "tagged_values": [],
+      "metaconstraints": [
+        {
+          "uml_role": "client",
+          "constraint": "NAFv4-ADMBw::BWRequirement"
+        },
+        {
+          "uml_role": "supplier",
+          "constraint": "NAFv4-ADMBw::BWRequirement"
+        }
+      ]
+    },
+    "Requires": {
+      "metatype": "Requires",
+      "alias": null,
+      "notes": "Relation that represents that a requirement assumes another requirement.",
+      "generalizes": null,
+      "base_stereotypes": null,
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Dependency",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "_MeaningBackwards": "Requires",
+            "_MeaningForwards": "Requires",
+            "direction": "Source -> Destination"
+          }
+        }
+      ],
+      "tagged_values": [],
+      "metaconstraints": [
+        {
+          "uml_role": "client",
+          "constraint": "NAFv4-ADMBw::BWRequirement"
+        },
+        {
+          "uml_role": "supplier",
+          "constraint": "NAFv4-ADMBw::BWRequirement"
+        }
+      ]
+    },
+    "StemsFrom": {
+      "metatype": "StemsFrom",
+      "alias": null,
+      "notes": "Relationship that states that one requirement stems from another.",
+      "generalizes": null,
+      "base_stereotypes": null,
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Dependency",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "_MeaningBackwards": "StemsFrom",
+            "_MeaningForwards": "StemsFrom",
+            "direction": "Source -> Destination"
+          }
+        }
+      ],
+      "tagged_values": [],
+      "metaconstraints": [
+        {
+          "uml_role": "client",
+          "constraint": "NAFv4-ADMBw::BWRequirement"
+        },
+        {
+          "uml_role": "supplier",
+          "constraint": "NAFv4-ADMBw::BWRequirement"
+        }
+      ]
+    },
+    "DerivedFrom": {
+      "metatype": "DerivedFrom",
+      "alias": null,
+      "notes": "Relation that shows that a functional or non-functional requirement is based on a process, role and task carrier, information element or other element.",
+      "generalizes": null,
+      "base_stereotypes": null,
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Dependency",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "_MeaningBackwards": "DerivedFrom",
+            "_MeaningForwards": "DerivedFrom",
+            "direction": "Source -> Destination"
+          }
+        }
+      ],
+      "tagged_values": [],
+      "metaconstraints": [
+        {
+          "uml_role": "client",
+          "constraint": "NAFv4-ADMBw::BWRequirement"
+        },
+        {
+          "uml_role": "supplier",
+          "constraint": "NAFv4-ADMBw::UAFElement"
+        }
+      ]
+    },
+    "Implements": {
+      "metatype": "Implements",
+      "alias": null,
+      "notes": "A tuple that defines how an element in the upper layer of abstraction is implemented by a semantically equivalent element (i.e. tracing the OperationalActivities to the Functions that implement them) in the lower level of abstraction.",
+      "generalizes": "MeasurableElement",
+      "base_stereotypes": "MeasurableElement SysML1.4::allocate",
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Abstraction",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "_MeaningBackwards": "Implements",
+            "_MeaningForwards": "Implements",
+            "direction": "Source -> Destination"
+          }
+        }
+      ],
+      "tagged_values": [],
+      "metaconstraints": [
+        {
+          "uml_role": "client",
+          "constraint": "NAFv4-ADMBw::DataElement;NAFv4-ADMBw::Function;NAFv4-ADMBw::InformationElement;NAFv4-ADMBw::OperationalActivity;NAFv4-ADMBw::OperationalActivityAction;NAFv4-ADMBw::OperationalConstraint;NAFv4-ADMBw::ResourceConnector;NAFv4-ADMBw::ResourceConstraint;NAFv4-ADMBw::ResourceExchange;NAFv4-ADMBw::ResourceInterface;NAFv4-ADMBw::ResourcePerformer;NAFv4-ADMBw::ResourceRole;NAFv4-ADMBw::ServicePolicy;NAFv4-ADMBw::StrategicConstraint"
+        },
+        {
+          "uml_role": "supplier",
+          "constraint": "NAFv4-ADMBw::ActualEnduringTask;NAFv4-ADMBw::InformationElement;NAFv4-ADMBw::OperationalActivity;NAFv4-ADMBw::OperationalActivityAction;NAFv4-ADMBw::OperationalAgent;NAFv4-ADMBw::OperationalConnector;NAFv4-ADMBw::OperationalConstraint;NAFv4-ADMBw::OperationalExchange;NAFv4-ADMBw::OperationalInterface;NAFv4-ADMBw::OperationalRole;NAFv4-ADMBw::ResourceConnector;NAFv4-ADMBw::ResourceConstraint;NAFv4-ADMBw::ServiceFunction;NAFv4-ADMBw::ServiceInterface;NAFv4-ADMBw::ServicePolicy;NAFv4-ADMBw::StrategicConstraint"
+        }
+      ]
+    },
+    "ToBeRealizedBy": {
+      "metatype": "ToBeRealizedBy",
+      "alias": null,
+      "notes": "Relation states that a functional or non-functional requirement should be realized through this element.",
+      "generalizes": null,
+      "base_stereotypes": null,
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Dependency",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "_MeaningBackwards": "ToBeRealizedBy",
+            "_MeaningForwards": "ToBeRealizedBy",
+            "direction": "Source -> Destination"
+          }
+        }
+      ],
+      "tagged_values": [],
+      "metaconstraints": [
+        {
+          "uml_role": "client",
+          "constraint": "NAFv4-ADMBw::BWRequirement"
+        },
+        {
+          "uml_role": "supplier",
+          "constraint": "NAFv4-ADMBw::DataElement;NAFv4-ADMBw::Function;NAFv4-ADMBw::Measurement;NAFv4-ADMBw::MeasurementType;NAFv4-ADMBw::Protocol;NAFv4-ADMBw::Protocolstack;NAFv4-ADMBw::ResourcePerformer;NAFv4-ADMBw::ResourcePort;NAFv4-ADMBw::ResourceRole;NAFv4-ADMBw::ServiceFunction;NAFv4-ADMBw::ServiceInterface;NAFv4-ADMBw::ServiceSpecification;NAFv4-ADMBw::ServiceSpecificationRole;NAFv4-ADMBw::Standard"
+        }
+      ]
+    },
+    "Classified": {
+      "metatype": "Classified",
+      "alias": null,
+      "notes": "Relationship that indicates which classification an element has.",
+      "generalizes": null,
+      "base_stereotypes": null,
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Dependency",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "_MeaningBackwards": "Classified",
+            "_MeaningForwards": "Classified",
+            "direction": "Source -> Destination"
+          }
+        }
+      ],
+      "tagged_values": [],
+      "metaconstraints": [
+        {
+          "uml_role": "client",
+          "constraint": "NAFv4-ADMBw::ArchitecturalDescription;NAFv4-ADMBw::DataElement;NAFv4-ADMBw::DocumentReference;NAFv4-ADMBw::InformationElement;NAFv4-ADMBw::ServiceSpecification"
+        },
+        {
+          "uml_role": "supplier",
+          "constraint": "NAFv4-ADMBw::Classification"
+        }
+      ]
+    },
+    "JustifiedBy": {
+      "metatype": "JustifiedBy",
+      "alias": null,
+      "notes": "Relation states that an Constraint is derived from a reference (Reference, DocumentReference, SMEReference).",
+      "generalizes": null,
+      "base_stereotypes": null,
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Dependency",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "_MeaningBackwards": "JustifiedBy",
+            "_MeaningForwards": "JustifiedBy",
+            "direction": "Source -> Destination"
+          }
+        }
+      ],
+      "tagged_values": [],
+      "metaconstraints": [
+        {
+          "uml_role": "client",
+          "constraint": "NAFv4-ADMBw::OperationalConstraint;NAFv4-ADMBw::ResourceConstraint;NAFv4-ADMBw::ServicePolicy;NAFv4-ADMBw::StrategicConstraint"
+        },
+        {
+          "uml_role": "supplier",
+          "constraint": "NAFv4-ADMBw::Reference"
+        }
+      ]
+    },
+    "OriginatesFrom": {
+      "metatype": "OriginatesFrom",
+      "alias": null,
+      "notes": "Relation that derives an element in the architectural model from a reference (Reference, DocumentReference, SMEReference).",
+      "generalizes": null,
+      "base_stereotypes": null,
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Dependency",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "_MeaningBackwards": "OriginatesFrom",
+            "_MeaningForwards": "OriginatesFrom",
+            "direction": "Source -> Destination"
+          }
+        }
+      ],
+      "tagged_values": [],
+      "metaconstraints": [
+        {
+          "uml_role": "client",
+          "constraint": "NAFv4-ADMBw::UAFElement"
+        },
+        {
+          "uml_role": "supplier",
+          "constraint": "NAFv4-ADMBw::Reference"
+        }
+      ]
+    },
+    "Satisfy": {
+      "metatype": "Satisfy",
+      "alias": null,
+      "notes": "This relation states that an constraint affects an element.",
+      "generalizes": null,
+      "base_stereotypes": null,
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Dependency",
+          "properties": {
+            "_HideUmlLinks": "True",
+            "_MeaningBackwards": "Satisfy",
+            "_MeaningForwards": "Satisfy",
+            "direction": "Source -> Destination"
+          }
+        }
+      ],
+      "tagged_values": [],
+      "metaconstraints": [
+        {
+          "uml_role": "client",
+          "constraint": "NAFv4-ADMBw::Capability;NAFv4-ADMBw::Capability;NAFv4-ADMBw::OperationalActivityAction;NAFv4-ADMBw::ServiceSpecification;NAFv4-ADMBw::SubjectOfOperationalConstraint;NAFv4-ADMBw::SubjectOfOperationalConstraint;NAFv4-ADMBw::SubjectOfResourceConstraint"
+        },
+        {
+          "uml_role": "supplier",
+          "constraint": "NAFv4-ADMBw::OperationalConstraint;NAFv4-ADMBw::ResourceConstraint;NAFv4-ADMBw::ServicePolicy;NAFv4-ADMBw::StrategicConstraint"
+        }
+      ]
+    },
+    "Checks": {
+      "metatype": "Checks",
+      "alias": null,
+      "notes": "Relation that shows that an acceptance criterion (FitCriterion) is valid for a functional or non-functional requirement.",
+      "generalizes": null,
+      "base_stereotypes": null,
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Dependency",
+          "properties": {
+            "_HideUmlLinks": "True"
+          }
+        }
+      ],
+      "tagged_values": [],
+      "metaconstraints": [
+        {
+          "uml_role": "client",
+          "constraint": "NAFv4-ADMBw::FitCriterion"
+        },
+        {
+          "uml_role": "supplier",
+          "constraint": "NAFv4-ADMBw::BWRequirement"
+        }
+      ]
+    },
+    "Evaluates": {
+      "metatype": "Evaluates",
+      "alias": null,
+      "notes": "This relation states that an evaluation criterion (FulfilmentCriterion) can be assigned to a specific acceptance criterion (FitCriterion).",
+      "generalizes": null,
+      "base_stereotypes": null,
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Realisation",
+          "properties": {
+            "_HideUmlLinks": "True"
+          }
+        }
+      ],
+      "tagged_values": [],
+      "metaconstraints": [
+        {
+          "uml_role": "client",
+          "constraint": "NAFv4-ADMBw::FulfilmentCriterion"
+        },
+        {
+          "uml_role": "supplier",
+          "constraint": "NAFv4-ADMBw::FitCriterion"
+        }
+      ]
+    },
+    "RealiseRequirement": {
+      "metatype": "RealiseRequirement",
+      "alias": null,
+      "notes": "Relation states that a functional or non-functional requirement is realized through this element.",
+      "generalizes": null,
+      "base_stereotypes": null,
+      "strictness": "all",
+      "is_abstract": null,
+      "applies_to": [
+        {
+          "uml_type": "Realisation",
+          "properties": {
+            "_HideUmlLinks": "True"
+          }
+        }
+      ],
+      "tagged_values": [],
+      "metaconstraints": [
+        {
+          "uml_role": "client",
+          "constraint": "NAFv4-ADMBw::DataElement;NAFv4-ADMBw::Function;NAFv4-ADMBw::Measurement;NAFv4-ADMBw::MeasurementType;NAFv4-ADMBw::Protocol;NAFv4-ADMBw::Protocolstack;NAFv4-ADMBw::ResourcePerformer;NAFv4-ADMBw::ResourcePort;NAFv4-ADMBw::ResourceRole;NAFv4-ADMBw::ServiceFunction;NAFv4-ADMBw::ServiceInterface;NAFv4-ADMBw::ServiceSpecification;NAFv4-ADMBw::ServiceSpecificationRole;NAFv4-ADMBw::Standard"
+        },
+        {
+          "uml_role": "supplier",
+          "constraint": "NAFv4-ADMBw::BWRequirement"
+        }
+      ]
+    }
+  }
+}
