@@ -43,6 +43,14 @@ Before using element names in any operation, especially when creating connection
 - Invalid connections to non-existent elements
 - Confusion about which element is being referenced
 
+### 3. Automatic Diagram Layout
+
+Never apply automatic diagram layout operations:
+- **Do not use** `layout_diagram` or similar automatic layout functions
+- **Manual layout only** - Let the user arrange elements manually in Sparx EA
+- Elements should be placed on diagrams using `place_element_on_diagram`, but their visual arrangement is left to the user
+- The user controls the visual organization of their diagrams
+
 ## Available Specialized Skills
 
 | Skill | Viewpoints | Description |
