@@ -1,5 +1,5 @@
 ---
-name: nafv4-interface-ea-mcp
+name: nafv4-requirements
 description: Create and manage NAF v4 (NATO Architecture Framework) / ADMBw Requirements Viewpoints (R2-R6) in Sparx Enterprise Architect. Use when the user wants to create R2 (Requirement Catalogue), R3 (Requirement Dependencies), R4 (Requirement Conformance), R5 (Requirement Derivation), or R6 (Requirement Realization) diagrams, add requirements elements, create associations between requirements, or work with NAF requirements modeling. Also triggers on natural language like "functional requirement", "requirement category", "derived from", "conforms to standard", etc.
 ---
 
