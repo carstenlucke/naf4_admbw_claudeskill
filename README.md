@@ -21,5 +21,3 @@ Dieses Repository enthält strukturierte Exporte der NAFv4-ADMBw-MDG-Datei. Jede
 1. Wähle die relevante Viewpoint-Familie über das passende Unterverzeichnis.
 2. Nutze das JSON für automatisierte Verarbeitung (z. B. MCP-Server, Codegenerierung).
 3. Verwende die README pro Verzeichnis als Nachschlagewerk für Modellierer.
-
-Alle Daten bleiben durch erneute Ausführung der Extraktionsskripte unmittelbar mit der MDG-Datei synchronisierbar.
