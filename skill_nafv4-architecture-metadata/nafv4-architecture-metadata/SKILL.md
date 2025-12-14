@@ -26,6 +26,33 @@ When the user requests NAF architecture metadata modeling:
 - **Validate connections** - Check metaconstraints before creating associations (see JSON data)
 - **Ask when ambiguous** - Offer options if request could map to multiple stereotypes
 
+## General Modeling Rules
+
+These rules apply to all NAF v4 modeling tasks:
+
+### 1. Modeling Target Clarification
+
+When the modeling target is unclear, always ask the user where to model:
+- **Currently open diagram** - Add elements to the active diagram
+- **Specific (non-displayed) diagram** - Add to a named diagram that may not be open
+- **Package in workspace** - Create elements in a specific package location
+- **New diagram** - Create a new diagram first
+
+**Default behavior:** If not explicitly specified, use the currently open diagram as the modeling target.
+
+### 2. Element Existence Verification
+
+Before using element names in any operation, especially when creating connections:
+- **Always check first** if the element already exists in the diagram or workspace
+- Use MCP `find_elements_by_name` to search for elements
+- If multiple elements with the same name exist, ask the user to clarify which one (by package path or GUID)
+- If the element doesn't exist, offer to create it or ask for clarification
+
+**This prevents:**
+- Creating duplicate elements
+- Invalid connections to non-existent elements
+- Confusion about which element is being referenced
+
 ## Supported Viewpoints
 
 | Viewpoint | ID | Purpose | Common Requests |
