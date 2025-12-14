@@ -12,6 +12,20 @@ Die Skills sind modular nach NAF v4 Viewpoint-Kategorien organisiert:
 
 ## Vorhandene Skills
 
+### `skill_nafv4-assistant`
+- **Zweck**: Bietet Bequemlichkeitsfunktionen für NAF v4 / ADMBw Modellierung.
+- **Kernfähigkeiten**:
+  - Automatisches Routing zu spezialisierten Funktionen basierend auf Kontext/Keywords
+  - Requirement Naming: Generierung prägnanter Titel aus ausführlichen Anforderungsbeschreibungen
+  - Batch-Operationen für häufige Modellierungsaufgaben
+  - Integration mit nafv4-coordinator für alle NAF-Modellierungsoperationen
+- **Architektur**: Cascading Skills (Assistant → Coordinator → Specialized Skills)
+- **Verfügbare Funktionen**:
+  - `functions/requirement-naming.md` - Anforderungsbenennung
+  - [Weitere Funktionen werden künftig hinzugefügt]
+- **Referenzen**:
+  - `references/extended_examples.md` - Erweiterte Beispiele für Requirement Naming
+
 ### `skill_nafv4-coordinator`
 - **Zweck**: Koordiniert NAF v4 / ADMBw Modellierung über alle Viewpoint-Kategorien hinweg.
 - **Kernfähigkeiten**:
